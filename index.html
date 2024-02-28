@@ -4,18 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Estrela Metalúrgica</title>
 </head>
 <body>
     <header>
-        <nav>
+        <span id="burger" class="material-icons" onclick="clickMenu(), addSombra()">menu</span>
+        <nav class="nav-menu" id="menu">
             <ul>
-                <li>A EMPRESA</li>
-                <li>QUALIDADE</li>
-                <li>PORTFÓLIO</li>
-                <li>ENCONTRE-NOS</li>
+                <li><a href="#secao1">A EMPRESA</a></li>
+                <li><a href="#secao2">QUALIDADE</a></li>
+                <li><a href="#secao3">PORTFÓLIO</a></li>
+                <li><a href="#secao4">ENCONTRE-NOS</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="secao1">
+            
+        </section>
+        <section id="secao2">
+            
+        </section>
+        <section id="secao3">
+            
+        </section>
+        <section id="secao4">
+            
+        </section>
+    </main>
+    <footer>
+        © 
+    </footer>
+
+    <script>
+        function clickMenu() {
+            if (menu.style.display ==  'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+    <script>
+        function addSombra() {
+          var elemento = document.getElementById('burger');
+      
+          var temSombra = elemento.style.boxShadow !== 'none' && elemento.style.boxShadow !== '';
+      
+          if (!temSombra) {
+            elemento.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.171)';
+          } else {
+            elemento.style.boxShadow = 'none';
+          }
+        }
+      </script>
 </body>
 </html>
