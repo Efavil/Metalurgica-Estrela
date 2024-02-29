@@ -23,7 +23,7 @@ header {
 
 span#burger {
     display: block;
-    width: 27.3vw;
+    width: 205.5px;
     height: 4.89vh;
     background-color: white;
     padding: 10px;
@@ -44,7 +44,7 @@ nav.nav-menu {
 
 nav.nav-menu a {
     display: block;
-    width: 26vw;
+    width: 199px;
     padding: 10px;
     padding-left: 17px;
     padding-bottom: 10px;

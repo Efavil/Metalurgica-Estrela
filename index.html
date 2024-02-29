@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Estrela Metalúrgica</title>
 </head>
-<body>
+<body onresize="muduTamanho()">
     <header>
-        <span id="burger" class="material-icons" onclick="clickMenu(), addSombra()">menu</span>
+        <span id="burger" class="material-icons" onclick="toggleMenu()">menu</span>
         <nav class="nav-menu" id="menu">
             <ul>
                 <li><a href="#secao1">A EMPRESA</a></li>
@@ -21,43 +22,52 @@
     </header>
     <main>
         <section id="secao1">
-            
+            <!-- Conteúdo da seção 1 -->
         </section>
         <section id="secao2">
-            
+            <!-- Conteúdo da seção 2 -->
         </section>
         <section id="secao3">
-            
+            <!-- Conteúdo da seção 3 -->
         </section>
         <section id="secao4">
-            
+            <!-- Conteúdo da seção 4 -->
         </section>
     </main>
     <footer>
-        © 
+        
     </footer>
 
     <script>
-        function clickMenu() {
-            if (menu.style.display ==  'block') {
-                menu.style.display = 'none'
+        function toggleMenu() {
+            let menu = document.getElementById('menu');
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none';
             } else {
-                menu.style.display = 'block'
+                menu.style.display = 'block';
+            }
+            addSombra();
+        }
+
+        function addSombra() {
+            let elemento = document.getElementById('burger');
+            let temSombra = elemento.style.boxShadow !== 'none' && elemento.style.boxShadow !== '';
+
+            if (!temSombra) {
+                elemento.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.171)';
+            } else {
+                elemento.style.boxShadow = 'none';
             }
         }
     </script>
     <script>
-        function addSombra() {
-          var elemento = document.getElementById('burger');
-      
-          var temSombra = elemento.style.boxShadow !== 'none' && elemento.style.boxShadow !== '';
-      
-          if (!temSombra) {
-            elemento.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.171)';
-          } else {
-            elemento.style.boxShadow = 'none';
-          }
+        function muduTamanho() {
+             if (window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+             }
         }
-      </script>
+    </script>
 </body>
 </html>
