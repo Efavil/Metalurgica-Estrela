@@ -19,8 +19,9 @@ body, html {
 
 
 header {
-    height: 8vh;
-    position: relative;
+    width: 100vw;
+    height: 75px;
+    position: fixed;
     background-color: white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.171);
 }
@@ -28,10 +29,10 @@ header {
 span#burger {
     display: block;
     width: 190px;
-    height: 7vh;
+    height: 50px;
     padding: 10px;
     padding-top: 20px;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
     user-select: none;
 }
@@ -43,7 +44,7 @@ span#burger:hover {
 nav.nav-menu {
     display: none;
     position: absolute;
-    top: 69px;
+    top: 77px;
 }
 
 nav.nav-menu a {
@@ -59,4 +60,11 @@ nav.nav-menu a {
     text-decoration: none;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.171);
 
+}
+
+main div.imagens {
+    display: block;
+    width: 768px;
+    height: 510px;
+    background-image: url(../imagens/imgteste1.jpg);
 }

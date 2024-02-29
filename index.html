@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="estilos/media-query1.css"> <!-- min-width: 768px -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Estrela Metalúrgica</title>
 </head>
-<body onresize="muduTamanho()">
+<body onresize="muduTamanho(), muduTamanho2()">
     <header>
         <span id="burger" class="material-icons" onclick="toggleMenu()">menu</span>
         <nav class="nav-menu" id="menu">
@@ -21,6 +21,7 @@
         </nav>
     </header>
     <main>
+        <div class="imagens"></div>
         <section id="secao1">
             <!-- Conteúdo da seção 1 -->
         </section>
@@ -45,18 +46,6 @@
                 menu.style.display = 'none';
             } else {
                 menu.style.display = 'block';
-            }
-            addSombra();
-        }
-
-        function addSombra() {
-            let elemento = document.getElementById('burger');
-            let temSombra = elemento.style.boxShadow !== 'none' && elemento.style.boxShadow !== '';
-
-            if (!temSombra) {
-                elemento.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.171)';
-            } else {
-                elemento.style.boxShadow = 'none';
             }
         }
     </script>
