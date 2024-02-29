@@ -23,8 +23,8 @@ header {
 
 span#burger {
     display: block;
-    width: 27.15vw;
-    height: 9.2vw;
+    width: 27.3vw;
+    height: 4.89vh;
     background-color: white;
     padding: 10px;
     font-size: 50px;
@@ -39,20 +39,19 @@ span#burger:hover {
 nav.nav-menu {
     display: none;
     position: absolute;
-    top: 67.1px;
+    top: 69px;
 }
 
 nav.nav-menu a {
     display: block;
     width: 26vw;
     padding: 10px;
-    padding-left: 16px;
+    padding-left: 17px;
     padding-bottom: 10px;
     background-color: white;
     color: black;
+    font-weight: bolder;
     text-decoration: none;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.171);
 
 }
-
-
