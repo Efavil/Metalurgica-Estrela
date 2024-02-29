@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query1.css"> <!-- min-width: 768px -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Estrela Metalúrgica</title>
 </head>
 <body onresize="muduTamanho(), muduTamanho2()">
@@ -21,9 +22,14 @@
         </nav>
     </header>
     <main>
-        <div class="imagens"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="" alt="Imagem 1"></div>
+                <div class="swiper-slide"><img src="" alt="Imagem 2"></div>
+                <div class="swiper-slide"><img src="" alt="Imagem 3"></div>
+        </div>
+        
         <section id="secao1">
-            <!-- Conteúdo da seção 1 -->
         </section>
         <section id="secao2">
             <!-- Conteúdo da seção 2 -->
@@ -57,6 +63,18 @@
                 menu.style.display = 'none'
              }
         }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1, // Quantidade de slides visíveis por vez
+            spaceBetween: 10, // Espaçamento entre os slides
+            loop: true, // Faz o carrossel voltar ao início após o final
+            autoplay: {
+            delay: 5000, // Tempo em milissegundos (5 segundos no exemplo)
+            disableOnInteraction: false, // Impede que a reprodução automática pare quando o usuário interage com o carrossel 
+            },
+        });
     </script>
 </body>
 </html>

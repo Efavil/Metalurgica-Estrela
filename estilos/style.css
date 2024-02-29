@@ -62,9 +62,3 @@ nav.nav-menu a {
 
 }
 
-main div.imagens {
-    display: block;
-    width: 768px;
-    height: 510px;
-    background-image: url(../imagens/imgteste1.jpg);
-}
