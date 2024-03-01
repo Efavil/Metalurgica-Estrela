@@ -9,8 +9,58 @@
         display: none;
     }
 
-    .mobile-menu-icon{
-        display: block;
+    .mobile-menu-icon {
+        display: block !important;
+        margin-right: 80%;
+        margin-top: auto;
     }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        left: -50px;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item2 {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu {
+        width: 100%;
+    }
+
+    .nav-link2 {
+        display: block;
+        border-top: 1px solid white;
+        padding-top: 15px;
+        text-decoration: none;
+        font-size: 1.15rem;
+        color: white;
+    }
+
     
+}
+
+@media screen and (max-width: 834px){
+    .nav-link {
+        font-size: .6rem !important;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .nav-link {
+        font-size: .8rem !important;
+        
+       
+    }
 }

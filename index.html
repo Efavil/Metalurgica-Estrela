@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilomq.css">
     <link rel="stylesheet" href="estilos/estilop.css">
     <title>Metalurgica Estrela</title>
 </head>
-<body>
+<body onresize="mudarTamanho()">
     <header>
         <nav class="nav-bar">
             <div class="nav-list">
@@ -21,25 +19,38 @@
                 </ul>
             </div>
 
-            <div class="logo">
-                <h1>Logo</h1>
+            <div class="mobile-menu-icon">
+                <button onclick="clickMenu()"><img class="icon" src="imagens/menu_white_36dp.svg" alt=""></button>
             </div>
 
-            <div class="mobile-menu-icon">
-                <span class="material-icons">
-                    menu_book
-                    </span>
+            <div class="logo">
+                <img src="imagens/LogoMãeDuduFinish2.png" alt="Logo Estrela">
+                <h1>©1986 <br> Estrela Ind.</h1>
             </div>
         </nav>
 
-        <div class="mobile-menu">
+        <div class="mobile-menu" id="itens">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">A EMPRESA</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">PORTIFÓLIO</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">QUALIDADE</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">ENCONTRE-NOS</a></li>
+                <li class="nav-item2"><a href="#" class="nav-link2">A EMPRESA</a></li>
+                <li class="nav-item2"><a href="#" class="nav-link2">PORTIFÓLIO</a></li>
+                <li class="nav-item2"><a href="#" class="nav-link2">QUALIDADE</a></li>
+                <li class="nav-item2"><a href="#" class="nav-link2">ENCONTRE-NOS</a></li>
             </ul>
         </div>
     </header>
+
+    <script>
+        function clickMenu() {
+            let itens = document.getElementById('itens');
+            itens.style.display = itens.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function mudarTamanho() {
+            let itens = document.getElementById('itens');
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
