@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+    }
+    
+}
